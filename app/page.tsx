@@ -1,4 +1,10 @@
 import Image from "next/image";
+import { projects } from "../lib/projects";
+import ProjectCard from "../components/ProjectCard";
+
+{
+  projects.map((project) => <ProjectCard key={project.title} {...project} />);
+}
 
 export default function Home() {
   return (
