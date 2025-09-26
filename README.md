@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Portfolio 
 
-## Getting Started
+Un site vitrine moderne et responsive, développé avec Next.js (App Router), React, TypeScript et Tailwind CSS.
+L’objectif : présenter mes projets web, mes compétences et offrir un point de contact clair et esthétique.ocumentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-First, run the development server:
+## 🚀 Stack utilisée
+	•	⚛️ Next.js 15 (App Router) → performance, SEO intégré, images optimisées
+	•	🎨 Tailwind CSS → design rapide, responsive et moderne
+	•	💻 TypeScript → typage sûr, composants robustes
+	•	🌗 Dark mode persistant → localStorage + prefers-color-scheme
+	•	🔗 Navigation fluide → sections ancrées (/#projets, /#apropos, /#contact)
+	•	📩 Formulaire de contact → gestion des envois basique (modulable avec API/email service)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  ## 📂 Structure du projet
+ ```
+ mon-portfolio/
+├─ app/                # App Router Next.js
+│  ├─ page.tsx         # Page d’accueil
+│  ├─ layout.tsx       # Layout global
+│  └─ globals.css      # Styles globaux + Tailwind
+│
+├─ components/
+│  ├─ Navbar.tsx       # Navigation sticky avec dark mode
+│  ├─ Footer.tsx       # Pied de page
+│  ├─ Section.tsx      # Wrapper de section
+│  ├─ ProjectCard.tsx  # Carte de projet
+│  ├─ Projet.tsx       # Grille des projets
+│  ├─ Apropos.tsx      # Section "À propos"
+│  ├─ ContactForm.tsx  # Formulaire de contact
+│  └─ ThemeToggle.tsx  # Bouton clair/sombre
+│
+├─ lib/
+│  └─ projects.ts      # Liste des projets
+│
+├─ public/
+│  ├─ avatar.jpg
+│
+├─ tailwind.config.ts
+├─ postcss.config.js
+└─ README.md
 ```
+## 🚀 Installation & Lancement
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Prérequis
+	•	Node.js 18+
+	•	npm ou pnpm
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Étapes
+```
+# 1. Cloner le repo
+git clone https://github.com/ton-utilisateur/mon-portfolio.git
+cd mon-portfolio
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 2. Installer les dépendances
+npm install
 
-## Learn More
+# 3. Lancer le serveur de dev
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# 4. Accéder à l’app
+http://localhost:3000
+```
+📜 Licence
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+© 2025 — Tous droits réservés.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ce projet est la propriété exclusive d’Emmanuelle Cahoreau.
+Aucune partie du code, du design ou des assets ne peut être copiée, modifiée, distribuée ou utilisée sans une autorisation écrite explicite de l’auteure.
