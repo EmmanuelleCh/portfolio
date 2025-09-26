@@ -2,6 +2,7 @@ import Apropos from "@/components/Apropos";
 import ContactForm from "@/components/ContactForm";
 import Projet from "@/components/Projet";
 import Section from "@/components/Section";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -57,7 +58,15 @@ export default function Home() {
 
             {/* Colonne image */}
             <div className="relative h-64 xs:h-72 sm:h-80 md:h-96 lg:h-[28rem] animate-float motion-reduce:animate-none">
-              <div className="card absolute inset-0 flex items-center justify-center" />
+              <div className="card absolute inset-0 flex items-center justify-center">
+                <Image
+                  src="/presentation.jpeg"
+                  alt="Description de l'image"
+                  fill
+                  className="object-cover rounded-2xl shadow-lg"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </section>
