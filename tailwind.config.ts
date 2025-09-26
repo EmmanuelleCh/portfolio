@@ -7,18 +7,12 @@ const config: Config = {
     extend: {
       fontFamily: { display: ["Inter", "ui-sans-serif", "system-ui"] },
       colors: {
-        brand: {
-          50: "#eef9ff",
-          100: "#d8f0ff",
-          200: "#b2e1ff",
-          300: "#84ceff",
-          400: "#4fb5ff",
-          500: "#1f98ff",
-          600: "#0e77db",
-          700: "#0b5fb0",
-          800: "#0d518f",
-          900: "#0f456f",
+        vertfonce: {
+          DEFAULT: "#A2AF9B", // version claire
+          dark: "#748873", // version sombre
         },
+        vert: "rgb(182, 206, 180)",
+        vertclair: "rgb(217, 233, 207)",
       },
       keyframes: {
         float: {
@@ -35,11 +29,22 @@ const config: Config = {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
+        bounce: {
+          "0%, 100%": {
+            transform: "translateY(-25%)",
+            animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+          },
+        },
       },
       animation: {
         float: "float 6s ease-in-out infinite",
         blob: "blob 10s ease-in-out infinite",
         shine: "shine 2.5s linear infinite",
+        bounce: "bounce 1s infinite",
       },
       boxShadow: { soft: "0 10px 30px -12px rgba(0,0,0,0.25)" },
     },

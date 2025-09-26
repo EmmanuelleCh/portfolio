@@ -3,7 +3,10 @@ export const metadata = {
   description:
     "Portfolio de développeuse web: React, Next.js, Tailwind. Projets, compétences, contact.",
   metadataBase: new URL("https://example.com"),
-  openGraph: { title: "Emma — Développeuse web", images: ["/preview.jpg"] },
+  openGraph: {
+    title: "Emma — Développeuse web",
+    images: ["fleche-droite.png"],
+  },
 };
 
 import Footer from "@/components/Footer";

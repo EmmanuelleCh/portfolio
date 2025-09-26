@@ -1,109 +1,100 @@
-import Image from "next/image";
-import { projects } from "../lib/projects";
-import ProjectCard from "../components/ProjectCard";
-
-{
-  projects.map((project) => <ProjectCard key={project.title} {...project} />);
-}
+import Apropos from "@/components/Apropos";
+import ContactForm from "@/components/ContactForm";
+import Projet from "@/components/Projet";
+import Section from "@/components/Section";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <main className="min-h-screen">
+      {/* HERO */}
+      <div className="relative overflow-hidden">
+        {/* Blobs décoratifs */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-40 -right-40 size-[24rem] sm:size-[30rem] md:size-[36rem] rounded-full bg-vertfonce dark:bg-vertfonce-dark blur-3xl animate-blob motion-reduce:animate-none -z-10"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-40 -left-40 size-[20rem] sm:size-[26rem] md:size-[32rem] rounded-full bg-vertfonce dark:bg-vertfonce-dark blur-3xl animate-blob motion-reduce:animate-none -z-10"
+        />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <section className="container-balanced px-4 sm:px-6 lg:px-8 min-h-[100svh] flex items-center">
+          <div className="grid items-center gap-10 lg:gap-14 md:grid-cols-2">
+            {/* Colonne texte */}
+            <div>
+              <h1 className="text-balance text-3xl md:text-5xl lg:text-6xl font-semibold leading-[1.08] tracking-tight">
+                Développeuse web{" "}
+                <span className="text-brand-500">full-stack</span>
+                <br /> qui aime le design.
+              </h1>
+
+              <p className="mt-4 text-pretty text-base md:text-lg opacity-80 max-w-prose">
+                React, Next.js, & Tailwind. J’assemble des interfaces propres,
+                performantes et esthétiques. Ici, mes projets, ma méthode et
+                comment je peux t’aider.
+              </p>
+
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a href="/#contact" className="btn btn-primary">
+                  Me contacter
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/emmanuelle-cahoreau/"
+                  className="btn btn-ghost"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Mon LinkedIn
+                </a>
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-6 opacity-75 text-sm sm:text-base">
+                <span>⚡️ Next.js</span>
+                <span>🎨 Tailwind</span>
+                <span>🧠 UX</span>
+              </div>
+            </div>
+
+            {/* Colonne image */}
+            <div className="relative h-64 xs:h-72 sm:h-80 md:h-96 lg:h-[28rem] animate-float motion-reduce:animate-none">
+              <div className="card absolute inset-0 flex items-center justify-center" />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* PROJETS */}
+      <Section
+        id="projets"
+        title="Projets"
+        subtitle="Mes réalisations récentes."
+      >
+        <div className="container-balanced px-4 sm:px-6 lg:px-8 min-h-[100svh] flex items-center">
+          <Projet />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </Section>
+
+      {/* À PROPOS
+      <Section
+        id="apropos"
+        title="À propos"
+        subtitle="Compétences, outils, valeurs de travail."
+      >
+        <div className="container-balanced px-4 sm:px-6 lg:px-8  flex items-center">
+          <Apropos />
+        </div>
+      </Section> */}
+
+      {/* CONTACT */}
+      <Section
+        id="contact"
+        title="Contact"
+        subtitle="Échangeons autour de ton projet."
+      >
+        <div className="container-balanced px-4 sm:px-6 lg:px-8  flex items-center">
+          <ContactForm />
+        </div>
+      </Section>
+    </main>
   );
 }

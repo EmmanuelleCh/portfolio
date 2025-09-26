@@ -18,19 +18,27 @@ export default function ProjectCard({
   repo,
 }: Props) {
   return (
-    <article className="card group overflow-hidden hover:shadow-xl transition">
-      <div className="relative h-48">
+    <article className="card group overflow-hidden flex flex-col motion-reduce:transition-none transition hover:shadow-xl">
+      {/* Image */}
+      <div className="relative w-full aspect-video">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover group-hover:scale-105 transition"
+          sizes="(min-width: 1024px) 400px, (min-width: 640px) 300px, 100vw"
+          className="object-contain object-center bg-neutral-100 dark:bg-neutral-900 rounded-t-2xl"
         />
       </div>
-      <div className="p-5">
-        <h3 className="text-lg font-semibold mb-1">{title}</h3>
-        <p className="text-sm opacity-80 mb-3">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+
+      {/* Contenu */}
+      <div className="p-4 sm:p-5 flex flex-col flex-1">
+        <h3 className="text-base sm:text-lg font-semibold mb-1 line-clamp-2">
+          {title}
+        </h3>
+        <p className="text-sm opacity-80 mb-3 line-clamp-3">{description}</p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-4 mt-auto">
           {tags.map((t) => (
             <span
               key={t}
@@ -40,20 +48,22 @@ export default function ProjectCard({
             </span>
           ))}
         </div>
-        <div className="flex gap-3 text-sm">
+
+        {/* Actions */}
+        <div className="flex flex-wrap gap-3 text-sm">
           {link && (
             <a
-              className="btn btn-primary"
+              className="btn btn-primary flex-1 sm:flex-initial justify-center"
               href={link}
               target="_blank"
               rel="noreferrer"
             >
-              Live
+              Voir
             </a>
           )}
           {repo && (
             <a
-              className="btn btn-ghost"
+              className="btn btn-ghost flex-1 sm:flex-initial justify-center"
               href={repo}
               target="_blank"
               rel="noreferrer"
