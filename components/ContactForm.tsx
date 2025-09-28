@@ -37,7 +37,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="card p-4 sm:p-6">
+    <div className="card p-4 sm:p-6 max-w-2x1 mx-auto w-full">
       <form onSubmit={handleSubmit} className="grid gap-4">
         <div className="grid sm:grid-cols-2 gap-4">
           <div>

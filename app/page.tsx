@@ -2,6 +2,7 @@ import Apropos from "@/components/Apropos";
 import ContactForm from "@/components/ContactForm";
 import Projet from "@/components/Projet";
 import Section from "@/components/Section";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -18,20 +19,19 @@ export default function Home() {
           className="pointer-events-none absolute -bottom-40 -left-40 size-[20rem] sm:size-[26rem] md:size-[32rem] rounded-full bg-vertfonce dark:bg-vertfonce-dark blur-3xl animate-blob motion-reduce:animate-none -z-10"
         />
 
-        <section className="container-balanced px-4 sm:px-6 lg:px-8 min-h-[100svh] flex items-center">
+        <div className="container-balanced px-4 sm:px-6 lg:px-8 min-h-[100svh] flex items-center">
           <div className="grid items-center gap-10 lg:gap-14 md:grid-cols-2">
             {/* Colonne texte */}
             <div>
               <h1 className="text-balance text-3xl md:text-5xl lg:text-6xl font-semibold leading-[1.08] tracking-tight">
                 Développeuse web{" "}
                 <span className="text-brand-500">full-stack</span>
-                <br /> qui aime le design.
+                <br /> & créative.
               </h1>
 
               <p className="mt-4 text-pretty text-base md:text-lg opacity-80 max-w-prose">
-                React, Next.js, & Tailwind. J’assemble des interfaces propres,
-                performantes et esthétiques. Ici, mes projets, ma méthode et
-                comment je peux t’aider.
+                J’assemble code et esthétique pour donner vie à des sites
+                modernes, responsives et immersifs.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -51,18 +51,26 @@ export default function Home() {
               <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-6 opacity-75 text-sm sm:text-base">
                 <span>⚡️ Next.js</span>
                 <span>🎨 Tailwind</span>
-                <span>🧠 UX</span>
+                <span>✨ React</span>
+                <span>💛 UX</span>
               </div>
             </div>
 
             {/* Colonne image */}
             <div className="relative h-64 xs:h-72 sm:h-80 md:h-96 lg:h-[28rem] animate-float motion-reduce:animate-none">
-              <div className="card absolute inset-0 flex items-center justify-center" />
+              <div className="card absolute inset-0 flex items-center justify-center">
+                <Image
+                  src="/presentation.jpeg" // mets ton chemin ici (ex: dossier public/images/)
+                  alt="Description de l'image"
+                  fill
+                  className="object-cover rounded-2xl shadow-lg"
+                  priority
+                />
+              </div>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-
       {/* PROJETS */}
       <Section
         id="projets"
