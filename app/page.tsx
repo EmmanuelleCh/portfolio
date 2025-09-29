@@ -2,6 +2,7 @@ import Apropos from "@/components/Apropos";
 import ContactForm from "@/components/ContactForm";
 import Projet from "@/components/Projet";
 import Section from "@/components/Section";
+import Pricing from "@/components/Pricing";
 import Image from "next/image";
 
 export default function Home() {
@@ -77,21 +78,15 @@ export default function Home() {
         title="Projets"
         subtitle="Mes réalisations récentes."
       >
-        <div className="container-balanced px-4 sm:px-6 lg:px-8 min-h-[100svh] flex items-center">
+        <div className="container-balanced px-4 sm:px-6 lg:px-8">
           <Projet />
         </div>
       </Section>
 
-      {/* À PROPOS
-      <Section
-        id="apropos"
-        title="À propos"
-        subtitle="Compétences, outils, valeurs de travail."
-      >
-        <div className="container-balanced px-4 sm:px-6 lg:px-8  flex items-center">
-          <Apropos />
-        </div>
-      </Section> */}
+      {/* PRIX */}
+      <Section id="tarifs" title="Prix" subtitle="Mes tarifs">
+        <Pricing />
+      </Section>
 
       {/* CONTACT */}
       <Section

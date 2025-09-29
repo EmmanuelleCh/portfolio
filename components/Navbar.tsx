@@ -62,12 +62,12 @@ export default function Navbar() {
           >
             Projets
           </Link>
-          {/*<Link
+          <Link
             className="hover:opacity-100 focus:outline-none focus-visible:ring ring-brand-500/40 rounded px-1 -mx-1"
-            href="/#apropos"
+            href="/#tarifs"
           >
-            À propos
-          </Link>*/}
+            Tarifs
+          </Link>
           <Link
             className="hover:opacity-100 focus:outline-none focus-visible:ring ring-brand-500/40 rounded px-1 -mx-1"
             href="/#contact"
