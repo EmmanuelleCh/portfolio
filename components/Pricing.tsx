@@ -18,7 +18,7 @@ export default function Pricing() {
             <p className="text-2xl font-bold text-brand-600 dark:text-brand-400">
               À partir de 500€
             </p>
-            <a href="/contact" className="btn btn-primary">
+            <a href="/#contact" className="btn btn-primary text-center">
               Demander un devis
             </a>
           </div>
@@ -39,7 +39,7 @@ export default function Pricing() {
             <p className="text-2xl font-bold text-brand-600 dark:text-brand-400">
               À partir de 700€
             </p>
-            <a href="/contact" className="btn btn-primary">
+            <a href="/#contact" className="btn btn-primary text-center">
               Demander un devis
             </a>
           </div>
@@ -60,7 +60,7 @@ export default function Pricing() {
             <p className="text-2xl font-bold text-brand-600 dark:text-brand-400">
               À partir de 1000€
             </p>
-            <a href="/contact" className="btn btn-primary">
+            <a href="/#contact" className="btn btn-primary text-center">
               Demander un devis
             </a>
           </div>
@@ -68,7 +68,7 @@ export default function Pricing() {
       </div>
 
       {/* Site sur mesure */}
-      <div className="mt-6 text-center">
+      <div className="mt-6 text-center card p-6 sm:p-8 hover:shadow-xl transition">
         {" "}
         {/* <- réduit */}
         <h3 className="text-lg font-semibold">Site sur mesure</h3>

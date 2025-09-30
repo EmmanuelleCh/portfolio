@@ -36,6 +36,15 @@ export const projects: Project[] = [
     repo: "",
   },
   {
+    title: "Emma aime dormir - en cours de dev",
+    description: "Refonte humoristique du site Emma matelas",
+    tags: ["React", "Next.js", "TypeScript"],
+    image: "/emmaimedormir.jpeg",
+    link: "",
+    repo: "",
+  },
+  /*
+  {
     title: "Readnest - en cours de dev",
     description: "",
     tags: ["React", "Next.js", "TypeScript"],
@@ -51,13 +60,5 @@ export const projects: Project[] = [
     image: "/laGriffeChic1.jpeg",
     link: "",
     repo: "",
-  },
-  {
-    title: "Emma aime dormir - en cours de dev",
-    description: "Refonte humoristique du site Emma matelas",
-    tags: ["React", "Next.js", "TypeScript"],
-    image: "/emmaimedormir.jpeg",
-    link: "",
-    repo: "",
-  },
+  },*/
 ];
